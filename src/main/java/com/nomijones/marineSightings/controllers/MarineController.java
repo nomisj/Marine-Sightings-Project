@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.nomijones.marineSightings.models.LoginUser;
 import com.nomijones.marineSightings.models.User;
+import com.nomijones.marineSightings.services.SightingService;
 import com.nomijones.marineSightings.services.UserService;
 
 @Controller
@@ -20,6 +21,8 @@ public class MarineController {
 	
 	@Autowired
 	private UserService users;
+	@Autowired
+	private SightingService sightings;
 	
 //START OF LOGIN AND REGISTRATION
 	@GetMapping("/")
@@ -63,5 +66,20 @@ public class MarineController {
     
         return "redirect:/home";
     }
-}
 //END OF LOGIN AND REGISTRATION
+    
+//START OF DASHBOARD
+	@GetMapping("/home")
+	public String home(Model model, HttpSession session) {
+		
+		if(session.getAttribute("userId") == null) {
+			return "redirect:/";
+		}
+		
+		model.addAttribute("sightings", sightings.all());
+		model.addAttribute("user", users.findById((Long)session.getAttribute("userId")));
+		return "home.jsp";
+		}
+//END OF DASHBOARD
+}
+

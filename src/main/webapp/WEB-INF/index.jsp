@@ -16,10 +16,9 @@
 </head>
 <body>
 
-<div>
-
 	<h1>Marine Sightings</h1>
-
+	
+<div>
 	<h2>Register</h2>
 
 	<div>
@@ -82,5 +81,6 @@
 	</div>
 
 </div> <!-- DIV FOR WRAPPING THE WHOLE FOURM TOGETHER -->
+
 </body>
 </html>

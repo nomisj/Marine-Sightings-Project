@@ -1,12 +1,15 @@
 package com.nomijones.marineSightings.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -44,8 +47,8 @@ public class User {
     private Date createdAt;
     private Date updatedAt;
     
-//    @OneToMany(mappedBy="user", fetch=FetchType.LAZY)
-//	private List<Sighting> sightings;
+    @OneToMany(mappedBy="user", fetch=FetchType.LAZY)
+	private List<Sighting> sightings;
 	
     public User() {
     	
@@ -116,12 +119,12 @@ public class User {
         this.updatedAt = new Date();
     }
     
-//	public List<Sighting> getSightings() {
-//		return shows;
-//	}
-//
-//	public void setShows(List<Sighting> sightings) {
-//		this.sightings = sightings;
-//	}
+	public List<Sighting> getSightings() {
+		return sightings;
+	}
+
+	public void setShows(List<Sighting> sightings) {
+		this.sightings = sightings;
+	}
     
 	}
