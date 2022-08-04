@@ -45,7 +45,7 @@ public class User {
     private Date updatedAt;
     
 //    @OneToMany(mappedBy="user", fetch=FetchType.LAZY)
-//	private List<Show> shows;
+//	private List<Sighting> sightings;
 	
     public User() {
     	
@@ -116,12 +116,12 @@ public class User {
         this.updatedAt = new Date();
     }
     
-//	public List<Show> getShows() {
+//	public List<Sighting> getSightings() {
 //		return shows;
 //	}
 //
-//	public void setShows(List<Show> shows) {
-//		this.shows = shows;
+//	public void setShows(List<Sighting> sightings) {
+//		this.sightings = sightings;
 //	}
     
 	}

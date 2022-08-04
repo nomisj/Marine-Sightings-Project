@@ -28,25 +28,25 @@
 			<div>
 			 	<form:errors path="userName"/>
 				<form:label for="userName" path="userName">User Name:</form:label>
-				<form:input type="text" path="userName"/>
+				<form:input type="text" placeholder="create user name"  path="userName"/>
 			</div>
 			
 			<div>
 				<form:errors path="email"/>
 				<form:label for="email" path="email">Email:</form:label>
-				<form:input type="text" path="email"/>
+				<form:input type="email" placeholder="enter email" path="email"/>
 			</div>
 			
 			<div>
 				<form:errors path="password"/>
-				<form:label for="password" path="password">Confirm Password:</form:label>
-				<form:input type="text" path="password"/>
+				<form:label for="password" path="password">Password:</form:label>
+				<form:input type="password" placeholder="create password"  path="password"/>
 			</div>
 			
 			<div>
 				<form:errors path="confirm"/>
-				<form:label for="" path="confirm">Confirm:</form:label>
-				<form:input type="text" path="confirm"/>
+				<form:label for="" path="confirm">Confirm Password:</form:label>
+				<form:input type="password" placeholder="confirm password" path="confirm"/>
 			</div>
 			
 			<div>
@@ -65,13 +65,13 @@
 			<div>
 				<form:errors path="email"/>
 				<form:label for="email" path="email">Email:</form:label>
-				<form:input type="text" path="email" class="form-control"/>
+				<form:input type="text" placeholder="enter valid email"  path="email"/>
 			</div>
 			
 			<div>
 				<form:errors path="password"/>
 				<form:label for="password" path="password">Password:</form:label>
-				<form:input type="text" path="password" class="form-control"/>
+				<form:input type="password" placeholder="enter valid password"  path="password"/>
 			</div>
 			
 			<div>
