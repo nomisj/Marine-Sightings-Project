@@ -30,7 +30,7 @@
 			<c:forEach var="sighting" items="${sightings}">
 		
 			<tr>
-				<td><a href="sightings/${listing.id}"><c:out value="${sighting.animal}"/></a></td>
+				<td><a href="sightings/${sighting.id}"><c:out value="${sighting.animal}"/></a></td>
 				<td><c:out value="${sighting.user.userName}"/></td>
 				<td><c:out value="${sighting.dateSpotted}"/></td>
 			</tr>
@@ -42,5 +42,6 @@
 	</div>
 	
 	<a href="/addPage">Click here to add a sighting</a>
+	
 </body>
 </html>
