@@ -17,10 +17,9 @@
 </head>
 <body>
 
-<h1>Marine Sightings</h1>
-
 <!-- Start of Registration Form -->
-	<div class="lunge-feeding">
+	<div class="background-image">
+	<h1>Marine Sightings</h1>
 		<div class="form-box">
 			<div class="button-box">
 				<div id="btn"></div>
