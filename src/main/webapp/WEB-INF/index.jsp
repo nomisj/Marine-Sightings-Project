@@ -13,74 +13,74 @@
 <head>
 <meta charset="UTF-8">
 <title>Marine Sightings</title>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
 <body>
 
-	<h1>Marine Sightings</h1>
-	
-<div>
-	<h2>Register</h2>
+<h1>Marine Sightings</h1>
 
-	<div>
-		<form:form action="/register" modelAttribute="newUser" class="form">
-		
-			<div>
-			 	<form:errors path="userName"/>
-				<form:label for="userName" path="userName">User Name:</form:label>
-				<form:input type="text" placeholder="create user name"  path="userName"/>
+<!-- Start of Registration Form -->
+	<div class="lunge-feeding">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Login</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
 			</div>
+<!-- Login Form -->
+		<form:form action="/login" modelAttribute="newLogin" id="login" class="input-group">
+			<form:errors path="email"/>
+			<form:label for="email" path="email">Email:</form:label>
+			<form:input type="text" path="email" class="input-field"/>
 			
-			<div>
-				<form:errors path="email"/>
-				<form:label for="email" path="email">Email:</form:label>
-				<form:input type="email" placeholder="enter email" path="email"/>
-			</div>
+			<form:errors path="password"/>
+			<form:label for="password" path="password">Password:</form:label>
+			<form:input type="password" path="password" class="input-field"/>
 			
-			<div>
-				<form:errors path="password"/>
-				<form:label for="password" path="password">Password:</form:label>
-				<form:input type="password" placeholder="create password"  path="password"/>
-			</div>
-			
-			<div>
-				<form:errors path="confirm"/>
-				<form:label for="" path="confirm">Confirm Password:</form:label>
-				<form:input type="password" placeholder="confirm password" path="confirm"/>
-			</div>
-			
-			<div>
-				<input type="submit" value="Submit" class="btn-primary"/>
-			</div>
-			
+			<input type="submit" value="Submit" class="submit-btn"/>	
 		</form:form>
-	</div>
-	
-	<!-- START OF LOG IN PORTION -->
-	
-	<h2>Log In</h2>
-
-	<div>
-		<form:form action="/login" modelAttribute="newLogin" class="form">
-			<div>
-				<form:errors path="email"/>
-				<form:label for="email" path="email">Email:</form:label>
-				<form:input type="text" placeholder="enter valid email"  path="email"/>
-			</div>
-			
-			<div>
-				<form:errors path="password"/>
-				<form:label for="password" path="password">Password:</form:label>
-				<form:input type="password" placeholder="enter valid password"  path="password"/>
-			</div>
-			
-			<div>
-				<input type="submit" value="Submit" class="btn-primary"/>
-			</div>
 		
+<!-- Registration Form -->
+		<form:form action="/register" modelAttribute="newUser" id="register" class="input-group">
+			<form:errors path="userName"/>
+			<form:label for="userName" path="userName">User Name:</form:label>
+			<form:input type="text" path="userName" class="input-field"/>
+			
+			<form:errors path="email"/>
+			<form:label for="email" path="email">Email:</form:label>
+			<form:input type="email" path="email" class="input-field"/>
+			
+			<form:errors path="password"/>
+			<form:label for="password" path="password">Password:</form:label>
+			<form:input type="password" path="password" class="input-field"/>
+			
+			<form:errors path="confirm"/>
+			<form:label for="" path="confirm">Confirm Password:</form:label>
+			<form:input type="password" path="confirm" class="input-field"/>
+			
+			<input type="submit" value="Submit" class="submit-btn"/>
 		</form:form>
+		</div>
 	</div>
 
-</div> <!-- DIV FOR WRAPPING THE WHOLE FOURM TOGETHER -->
+		<script>
+		
+		var x = document.getElementById("login");
+		var y = document.getElementById("register");
+		var z = document.getElementById("btn");
+		
+		function register(){
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		
+		function login(){
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0";
+		}
+		</script>
 
 </body>
 </html>
