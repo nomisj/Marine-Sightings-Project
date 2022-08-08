@@ -11,10 +11,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edit Marine Sighting</title>
+<title>Marine Sightings</title>
+<link rel="stylesheet" type="text/css" href="/css/addEditPage.css">
+<!-- for Bootstrap CSS -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<!-- For any Bootstrap that uses JS or jQuery-->
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div>
+<div class="background-image">
 
 	<h1><c:out value="${sighting.animal}"/></h1>
 
@@ -56,7 +62,7 @@
 				<input type="submit" value="Submit" class="btn-primary"/>
 			</div>
 		</form:form>
-			<!-- 		ADD DELETE METHOD HERE then add to controller-->
+			
 		<form action="/sightings/${sighting.id}" method="post">
     		<input type="hidden" name="_method" value="delete">
     		<input type="submit" value="Delete">
