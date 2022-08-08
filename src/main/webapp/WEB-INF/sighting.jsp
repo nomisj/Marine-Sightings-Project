@@ -12,15 +12,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Marine Sightings</title>
+<link rel="stylesheet" type="text/css" href="/css/sightingPage.css">
+<!-- for Bootstrap CSS -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<!-- For any Bootstrap that uses JS or jQuery-->
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div>
-		<h1><c:out value="${sighting.animal}"/></h1>
+	<div class="background-image">
+
 		<a href="/home">Home</a>
 		
-		<div>
+		<div class="display">		
+			<h2><c:out value="${sighting.animal}"/></h2>
 			<p>Added By: <c:out value="${sighting.user.userName}"/></p>
-			<p>Date Spotted: <c:out value="${sighting.dateSpotted}"/></p>
+			<p>Date - Time Spotted: <c:out value="${sighting.dateSpotted}"/></p>
 			<p>Description: <c:out value="${sighting.description}"/></p>
 		</div>
 		
@@ -32,6 +39,7 @@
     		<input type="submit" value="Delete">
 		</form>
 		</c:if>
+		
 	</div>
 </body>
 </html>

@@ -14,6 +14,11 @@
 <meta charset="UTF-8">
 <title>Marine Sightings</title>
 <link rel="stylesheet" type="text/css" href="/css/home.css">
+<!-- for Bootstrap CSS -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<!-- For any Bootstrap that uses JS or jQuery-->
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="background-image">
@@ -21,16 +26,20 @@
 
 	
 	<div>
+	
 	<h3>Recent Marine Sightings</h3>
+	
 	<p class="add-page-link"><a href="/addPage">Click here to add a sighting</a></p>
-	<p class="logout-link"><a href="/logout">Logout</a></p>
-		<table class="table-box">
+	
+		<table class="table table-borderless">
 		
 			<tr>
 				<th>Mammal Sighted</th>
 				<th>Added by</th>
 				<th>Date - Time Spotted</th>
 			</tr>
+			
+			<tbody>
 			<c:forEach var="sighting" items="${sightings}">
 		
 			<tr>
@@ -39,11 +48,14 @@
 				<td><c:out value="${sighting.dateSpotted}"/></td>
 			</tr>
 			</c:forEach>
-			
+			</tbody>
 			
 		</table>
 	
 	</div>
+	
+
+	<p class="logout-link"><a href="/logout">Logout</a></p>
 	</div>
 </body>
 </html>
