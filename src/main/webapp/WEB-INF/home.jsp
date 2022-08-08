@@ -12,20 +12,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Marine Sightings Home</title>
+<title>Marine Sightings</title>
+<link rel="stylesheet" type="text/css" href="/css/home.css">
 </head>
 <body>
+	<div class="background-image">
 	<h1>Welcome, <c:out value="${user.userName}"/>!</h1>
 	<a href="/logout">Logout</a>
 	
 	<div>
 	<h3>Recent Marine Sightings</h3>
-		<table border=1>
+		<table class="table-box">
 		
 			<tr>
 				<th>Mammal Sighted</th>
 				<th>Added by</th>
-				<th>Date Spotted</th>
+				<th>Date/Time Spotted</th>
 			</tr>
 			<c:forEach var="sighting" items="${sightings}">
 		
@@ -42,6 +44,6 @@
 	</div>
 	
 	<a href="/addPage">Click here to add a sighting</a>
-	
+	</div>
 </body>
 </html>

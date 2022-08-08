@@ -16,7 +16,6 @@
 <link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
 <body>
-
 <!-- Start of Registration Form -->
 	<div class="background-image">
 	<h1>Marine Sightings</h1>
