@@ -23,31 +23,33 @@
 <div class="background-image">
 
 	<h1><c:out value="${sighting.animal}"/></h1>
+	<p><a href="/home">Go Back</a></p>
 
+		
 	<div>
 		<form:form action="/sightings/${sighting.id}" modelAttribute="sighting" class="form" method="post">
 			<input type="hidden" name="_method" value="put"/>
 			
 		
-			<div>
+			<div class="form-group">
 			 	<form:errors path="animal" class="error"/>
 				<form:label for="animal" path="animal">Type of animal:</form:label>
 				<form:input type="text" path="animal" class="form-control"/>
 			</div>
 			
-			<div>
+			<div class="form-group">
 				<form:errors path="description" class="error"/>
 				<form:label for="description" path="description">Description of Behaviour:</form:label>
 				<form:input type="text" path="description" class="form-control"/>
 			</div>
 			
-			<div>
+			<div class="form-group">
 				<form:errors path="location" class="error"/>
 				<form:label for="location" path="location">Location Sighted:</form:label>
 				<form:input type="text" path="location" class="form-control"/>
 			</div>
 			
-			<div>
+			<div class="form-group">
 				<form:errors path="dateSpotted" class="error"/>
 				<form:label for="dateSpotted" path="dateSpotted">Date of Sighting:</form:label>
 				<form:input type="date" path="dateSpotted" class="form-control"/>
@@ -58,19 +60,22 @@
 				<form:input type="hidden" path="user" value="${user.id}" class="form-control"/>
 			</div>
 			
-			<div>
-				<input type="submit" value="Submit" class="btn-primary"/>
+			<div class="form-group">
+				<input type="submit" value="Submit" class="btn btn-primary"/>
 			</div>
-		</form:form>
 			
-		<form action="/sightings/${sighting.id}" method="post">
-    		<input type="hidden" name="_method" value="delete">
-    		<input type="submit" value="Delete">
-		</form>
+		</form:form>
 		
 	</div>
 	
-		<a href="/home">Cancel</a>
+	<div>
+		<form action="/sightings/${sighting.id}" method="post">
+            <input type="hidden" name="_method" value="delete">
+    		<input type="submit" value="Delete" class="btn btn-primary" id="delete-btn">
+		</form>
+	</div>
+	
+		
 
 
 
