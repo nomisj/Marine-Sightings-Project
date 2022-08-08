@@ -17,17 +17,19 @@
 </head>
 <body>
 	<div class="background-image">
-	<h1>Welcome, <c:out value="${user.userName}"/>!</h1>
-	<a href="/logout">Logout</a>
+	<h2>Welcome, <c:out value="${user.userName}"/>!</h2>
+
 	
 	<div>
 	<h3>Recent Marine Sightings</h3>
+	<p class="add-page-link"><a href="/addPage">Click here to add a sighting</a></p>
+	<p class="logout-link"><a href="/logout">Logout</a></p>
 		<table class="table-box">
 		
 			<tr>
 				<th>Mammal Sighted</th>
 				<th>Added by</th>
-				<th>Date/Time Spotted</th>
+				<th>Date - Time Spotted</th>
 			</tr>
 			<c:forEach var="sighting" items="${sightings}">
 		
@@ -42,8 +44,6 @@
 		</table>
 	
 	</div>
-	
-	<a href="/addPage">Click here to add a sighting</a>
 	</div>
 </body>
 </html>
