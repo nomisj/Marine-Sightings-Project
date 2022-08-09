@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Marine Sightings</title>
+<title> Edit Marine Sighting</title>
 <link rel="stylesheet" type="text/css" href="/css/addEditPage.css">
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
@@ -24,6 +24,13 @@
 
 	<h1><c:out value="${sighting.animal}"/></h1>
 	<p><a href="/home">Go Back</a></p>
+	
+	<div class="col text-center">
+		<form action="/sightings/${sighting.id}" method="post">
+            <input type="hidden" name="_method" value="delete">
+    		<input type="submit" value="Delete" class="btn btn-primary" id="delete-btn">
+		</form>
+	</div>
 
 		
 	<div>
