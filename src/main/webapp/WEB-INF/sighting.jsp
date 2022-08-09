@@ -34,11 +34,6 @@
 		
 		<c:if test="${sighting.user.id == user.id }">
 		<button class="btn btn-primary"><a href="/sightings/${sighting.id}/edit">Update</a></button>
-<!-- 		ADD DELETE METHOD HERE then add to controller-->
-<%-- 		<form action="/sightings/${sighting.id}" method="post">
-    		<input type="hidden" name="_method" value="delete">
-    		<input type="submit" value="Delete" class="btn btn-primary" id="delete-btn">
-		</form> --%>
 		</c:if>
 		</div>
 	</div>

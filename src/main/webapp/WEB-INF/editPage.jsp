@@ -25,7 +25,7 @@
 	<h1><c:out value="${sighting.animal}"/></h1>
 	<p><a href="/home">Go Back</a></p>
 	
-	<div class="col text-center">
+	<div class="d-flex justify-content-center">
 		<form action="/sightings/${sighting.id}" method="post">
             <input type="hidden" name="_method" value="delete">
     		<input type="submit" value="Delete" class="btn btn-primary" id="delete-btn">
@@ -74,17 +74,6 @@
 		</form:form>
 		
 	</div>
-	
-	<div>
-		<form action="/sightings/${sighting.id}" method="post">
-            <input type="hidden" name="_method" value="delete">
-    		<input type="submit" value="Delete" class="btn btn-primary" id="delete-btn">
-		</form>
-	</div>
-	
-		
-
-
 
 </div>
 </body>

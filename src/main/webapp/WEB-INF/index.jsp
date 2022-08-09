@@ -27,11 +27,11 @@
 			</div>
 <!-- Login Form -->
 		<form:form action="/login" modelAttribute="newLogin" id="login" class="input-group">
-			<form:errors path="email"/>
+			<form:errors path="email" class="error"/>
 			<form:label for="email" path="email">Email:</form:label>
 			<form:input type="text" path="email" class="input-field"/>
 			
-			<form:errors path="password"/>
+			<form:errors path="password" class="error"/>
 			<form:label for="password" path="password">Password:</form:label>
 			<form:input type="password" path="password" class="input-field"/>
 			
@@ -40,19 +40,19 @@
 		
 <!-- Registration Form -->
 		<form:form action="/register" modelAttribute="newUser" id="register" class="input-group">
-			<form:errors path="userName"/>
+			<form:errors path="userName" class="error"/>
 			<form:label for="userName" path="userName">User Name:</form:label>
 			<form:input type="text" path="userName" class="input-field"/>
 			
-			<form:errors path="email"/>
+			<form:errors path="email" class="error"/>
 			<form:label for="email" path="email">Email:</form:label>
 			<form:input type="email" path="email" class="input-field"/>
 			
-			<form:errors path="password"/>
+			<form:errors path="password" class="error"/>
 			<form:label for="password" path="password">Password:</form:label>
 			<form:input type="password" path="password" class="input-field"/>
 			
-			<form:errors path="confirm"/>
+			<form:errors path="confirm" class="error"/>
 			<form:label for="" path="confirm">Confirm Password:</form:label>
 			<form:input type="password" path="confirm" class="input-field"/>
 			
