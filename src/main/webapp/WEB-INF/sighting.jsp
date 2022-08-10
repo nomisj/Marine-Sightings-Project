@@ -27,11 +27,11 @@
 		
 		<div class="display">		
 			
-			<p>Added By: <c:out value="${sighting.user.userName}"/></p>
-			<p>Date - Time Spotted: <c:out value="${sighting.dateSpotted}"/></p>
+			<p>Added By: <c:out value="${sighting.user.userName}"/></p> 
+			<p>Location: <c:out value="${sighting.location}"/></p>
 			<p>Description: <c:out value="${sighting.description}"/></p>
-		
-		
+			<p>Date - Time Spotted: <c:out value="${sighting.dateSpotted}"/></p>
+
 		<c:if test="${sighting.user.id == user.id }">
 		<button class="btn btn-primary"><a href="/sightings/${sighting.id}/edit">Update</a></button>
 		</c:if>
