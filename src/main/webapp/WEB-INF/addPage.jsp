@@ -34,7 +34,7 @@
 			
 			<div class="form-group">
 				<form:errors path="description" class="error"/>
-				<form:label for="description" path="description" class="label">Description of Behaviour:</form:label>
+				<form:label for="description" path="description" class="label">Description of Behavior:</form:label>
 				<form:input type="text" path="description" class="form-control"/>
 			</div>
 			
@@ -46,8 +46,10 @@
 			
 			<div class="form-group">
 				<form:errors path="dateSpotted" class="error"/>
+				<%-- <form:label for="dateSpotted" path="dateSpotted" class="label">Date of Sighting:</form:label> --%>
 				<form:label for="dateSpotted" path="dateSpotted" class="label">Date of Sighting:</form:label>
-				<form:input type="datetime-local" path="dateSpotted" data-format="DD-MM-YYYY HH:mm" data-template="DD/MM/YYYY HH:mm" class="form-control"/>
+<%-- 				<form:input type="datetime-local" path="dateSpotted" data-format="DD-MM-YYYY HH:mm" data-template="DD/MM/YYYY HH:mm" class="form-control"/> --%>
+				<form:input type="datetime-local" path="dateSpotted" class="form-control"/>
 			</div>
 			
 			<div>
