@@ -59,7 +59,7 @@
 			<div class="form-group">
 				<form:errors path="dateSpotted" class="error"/>
 				<form:label for="dateSpotted" path="dateSpotted" class="label">Date of Sighting:</form:label>
-				<form:input type="datetime-local" path="dateSpotted" class="form-control"/>
+				<form:input type="date" path="dateSpotted" class="form-control"/>
 			</div>
 			
 			<div>

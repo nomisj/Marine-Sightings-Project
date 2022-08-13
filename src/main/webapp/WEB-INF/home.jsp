@@ -36,7 +36,7 @@
 			<tr>
 				<th>Mammal Sighted</th>
 				<th>Added by</th>
-				<th>Date - Time Spotted</th>
+				<th>Date Spotted</th>
 			</tr>
 			
 			<tbody>
